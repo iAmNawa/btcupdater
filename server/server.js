@@ -25,7 +25,7 @@ setInterval(function() {
      console.log('body:', body); // Print the HTML for the Google homepage.
      btcusd.body = JSON.parse(body)
   });
-}, 5000)
+}, 1000)
 
 
 app.get('/results', function (req, res) {

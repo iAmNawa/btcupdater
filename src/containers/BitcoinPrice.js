@@ -3,7 +3,8 @@ const ROOT_URL = 'http://localhost:7777/results';
 
 class BitcoinPrice extends Component {
   state = {
-    btcprice: 0
+    btcprice: 0,
+    secondsElapsed: 0
   }
 
   letUsGetResults = () => {
@@ -17,13 +18,21 @@ class BitcoinPrice extends Component {
       console.log(request.response.price)
     }.bind(this)
     request.send();
-}
+ }
+
+  componentDidMount = () => {
+     this.interval = setInterval(this.letUsGetResults, 1000);
+   }
+
+  componentWillUnmount = () => {
+    clearInterval(this.interval);
+  }
 
   render () {
     return (
       <div>
         <h1>{this.state.btcprice}</h1>
-       <button onClick={this.letUsGetResults}>Click me for current price of bitcoin</button>
+        <h1>The price of bitcoin</h1>
       </div>
     )
   }
