@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ComponentOne from '../components/ComponentOne';
 
 class ContainerOne extends Component {
 state = {
@@ -21,6 +22,7 @@ state = {
        <h1>"Is this working?"</h1>
        <h1>{this.state.statefour}</h1>
        <button onClick={this.stateSetter}>Click me to update state</button>
+       <ComponentOne name="World" />
       </div>
     )
   }
