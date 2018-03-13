@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ComponentOne from '../components/ComponentOne';
+import BitcoinPrice from './BitcoinPrice';
 
 class ContainerOne extends Component {
 state = {
@@ -23,6 +24,7 @@ state = {
        <h1>{this.state.statefour}</h1>
        <button onClick={this.stateSetter}>Click me to update state</button>
        <ComponentOne name="World" />
+       <BitcoinPrice />
       </div>
     )
   }

@@ -1,6 +1,11 @@
 const port = 7777;
 const app = require('express')();
 const request = require('request');
+const cors = require('cors');
+
+// App setup
+app.use(cors());
+
 
 const url = "https://api.gdax.com/products/BTC-USD/ticker";
 
