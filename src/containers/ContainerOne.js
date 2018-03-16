@@ -20,9 +20,6 @@ state = {
   render () {
     return (
       <div>
-       <h1>"Is this working?"</h1>
-       <h1>{this.state.statefour}</h1>
-       <button onClick={this.stateSetter}>Click me to update state</button>
        <ComponentOne name="World" />
        <BitcoinPrice />
       </div>
